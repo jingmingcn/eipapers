@@ -1,75 +1,96 @@
-
-\documentclass[10pt, conference, compsocconf]{IEEEtran}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    INSTITUTE OF PHYSICS PUBLISHING                                   %
+%                                                                      %
+%   `Preparing an article for publication in an Institute of Physics   %
+%    Publishing journal using LaTeX'                                   %
+%                                                                      %
+%    LaTeX source code `ioplau2e.tex' used to generate `author         %
+%    guidelines', the documentation explaining and demonstrating use   %
+%    of the Institute of Physics Publishing LaTeX preprint files       %
+%    `iopart.cls, iopart12.clo and iopart10.clo'.                      %
+%                                                                      %
+%    `ioplau2e.tex' itself uses LaTeX with `iopart.cls'                %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% First we have a character check
+%
+% ! exclamation mark    " double quote  
+% # hash                ` opening quote (grave)
+% & ampersand           ' closing quote (acute)
+% $ dollar              % percent       
+% ( open parenthesis    ) close paren.  
+% - hyphen              = equals sign
+% | vertical bar        ~ tilde         
+% @ at sign             _ underscore
+% { open curly brace    } close curly   
+% [ open square         ] close square bracket
+% + plus sign           ; semi-colon    
+% * asterisk            : colon
+% < open angle bracket  > close angle   
+% , comma               . full stop
+% ? question mark       / forward slash 
+% \ backslash           ^ circumflex
+%
+% ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+% abcdefghijklmnopqrstuvwxyz 
+% 1234567890
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\documentclass[12pt]{iopart}
+%Uncomment next line if AMS fonts required
+%\usepackage{iopams} 
 \usepackage{graphicx}
 \usepackage[tight,footnotesize]{subfigure}
-\usepackage{algorithm}
+\usepackage{algorithm} 
 \usepackage{algpseudocode}
 \algblock{Input}{EndInput}
 \algnotext{EndInput}
 \algblock{Output}{EndOutput}
 \algnotext{EndOutput}
 \newcommand{\Desc}[2]{\State \makebox[2em][l]{#1}#2}
+\bibliographystyle{iopart-num}
 
-% correct bad hyphenation here
-\hyphenation{}
 \begin{document}
 
-\title{Bare Demo of IEEEtran.cls for IEEECS Conferences}
+\title[An Embedded Visualization Method through Temporal Bibliographic Analysis]{An Embedded Visualization Method through Temporal Bibliographic Analysis}
 
-\author{
-\IEEEauthorblockN{Yan Wang}
-\IEEEauthorblockA{\\
-State Grid Shandong DongYing Electric Power Company\\
-Jinan, China\\
-Email: zdhkj2019@163.com}
+\author{Yan WANG$^{1,*}$, Mingyu SUN$^1$, Ning HU$^1$, Sentao LIU$^1$, Juncheng SI$^1$}
 
-\and
+\address{$^1$ State Grid Shandong DongYing Electric Power Company, DongYing 257091, Shandong Province, China}
+\ead{$^*$ zdhkj2019@163.com}
+\vspace{10pt}
+%\begin{indented}
+%\item[]June 2019
+%\end{indented}
 
-\IEEEauthorblockN{Mingyu Sun}
-\IEEEauthorblockA{\\
-State Grid Shandong DongYing Electric Power Company\\
-Jinan, China\\
-Email: zdhkj2019@163.com}
-\and
-
-\IEEEauthorblockN{Ning Hu}
-\IEEEauthorblockA{\\
-State Grid Shandong DongYing Electric Power Company\\
-Jinan, China\\
-Email: zdhkj2019@163.com}
-
-\and
-
-\IEEEauthorblockN{Sentao Liu}
-\IEEEauthorblockA{\\
-State Grid Shandong DongYing Electric Power Company\\
-Jinan, China\\
-Email: zdhkj2019@163.com}
-
-\and
-
-\IEEEauthorblockN{Juncheng Si}
-\IEEEauthorblockA{\\
-State Grid Shandong DongYing Electric Power Company\\
-Jinan, China\\
-Email: zdhkj2019@163.com}
-}
-
-% make the title area
-\maketitle
 \begin{abstract}
 Visual analytics play an important role in understanding complex datasets, e.g. the bibliographic data set. Word clouds, which use a compact visual form of words, have been used widely to provide the content overview of a set of documents, especially the hot topic trends. In this paper, we proposed a visualization method that embedding the temporal patterns along the word to visually illustrate the hot topic evolution. 
-
 \end{abstract}
 
-\begin{IEEEkeywords}
-bibliographic dataset; word cloud; topic modeling; text visualization;
+%\keyword{bibliographic dataset; word cloud; topic modeling; text visualization;}
 
-\end{IEEEkeywords}
+%
+% Uncomment for keywords
+%\vspace{2pc}
+%\noindent{\it Keywords}: XXXXXX, YYYYYYYY, ZZZZZZZZZ
+%
+% Uncomment for Submitted to journal title message
+%\submitto{\JPA}
+%
+% Uncomment if a separate title page is required
+%\maketitle
+% 
+% For two-column output uncomment the next line and choose [10pt] rather than [12pt] in the \documentclass declaration
+%\ioptwocol
+%
 
-\IEEEpeerreviewmaketitle
+
 
 \section{Introduction}
+
 In recent years, word clouds (or tag clouds), which use a compact visual form of words, have been used widely to provide the content overview of a set of documents, e.g. the bibliographic data set. How to provide a pleasing summarization for a huge text data has thus become an important research topic in information visualization. Word clouds are text-based visual representations that display word significance in terms of popularity and importance by using different font sizes and colors. Existing efforts in producing effective tag clouds have achieved certain success especially in addressing many aesthetic issues. However, existing tag clouds are inadequate in portraying temporal content evolution of a set of bibliography documents. For example, to understand how a hot research topic have varied during the last decade could be a difficult task if we just visualize the bibliography collections one by one using tag clouds. A simple animation between different tag clouds at different time points would be inadequate to preserve the context for effectively tracking the evolution of the content to find the sequential patterns or correlations.
 
 To facilitate the understanding of temporal content evolution in a set of bibliography documents, we propose a visualization method that embedding the temporal patterns along the word to visually illustrate the hot topic evolution.
@@ -99,7 +120,7 @@ To facilitate generation of visual output at all three levels, a flexible mappin
 
 \begin{figure}
     \centering
-    \includegraphics[width=.45\textwidth]{images/pipeline.png}
+    \includegraphics[width=.95\textwidth]{images/pipeline.png}
     \caption{Visualization Pipeline}
     \label{fig:pipeline}
 \end{figure}
@@ -141,7 +162,7 @@ Given the ignored word list and the merged word list, the raw data processing pr
 \Desc{n}{return the top \textit{n} records}
 \EndInput
 \Output
-\Desc{R}{$ R := \{R_1,R_2,...,R_n\}$} \\
+\Desc{R}{$ R := \{R_1,R_2,...,R_n\}$} 
 \Comment {where $R_i := \{word, weight, seq \}$} \\
 \Comment {$seq := [\{t_1,v_1\},...,\{t_n,v_n\}]$}
 \EndOutput
@@ -149,19 +170,18 @@ Given the ignored word list and the merged word list, the raw data processing pr
 \Procedure{DataProcess}{$X, P, M, n$}
 \State $t_{min} \gets \Call{MinYear}{X}$
 \State $t_{max} \gets \Call{MaxYear}{X}$
-\State $ry \gets t_{max} - t_{min} + 1$\\
+\State $ry \gets t_{max} - t_{min} + 1$
 \Comment{ry: the time range in years}
 \State $R = \emptyset$
 \For { $\forall X^{(i)} \in X$}
-	\For { $\forall w, t \in X^{(i)}$} \\
-		\Comment{w is the word in text mode} \\
-		\Comment{t is the time variable in year}
+	\For { $\forall w, t \in X^{(i)}$} 
+		\Comment{w is the word in text mode, t is the time variable}
 		\If{$ w \in P $}
 		\State{\textbf{continue}}
 		\EndIf
 		\For{$\forall M^{(i)} \in M$}
 			\If{$ w \in M^{(i)} $}
-				\State{$w \gets M^{(i)}_0$} \\
+				\State{$w \gets M^{(i)}_0$} 
 				\Comment{$M^{(i)}_0$ is the replacement in the group $M^{(i)}$}
 				\State $found \gets false $
 				\For{$\forall R_i \in R$}
@@ -174,9 +194,8 @@ Given the ignored word list and the merged word list, the raw data processing pr
 					
 				\EndFor
 				\If{$ not found$}
-				\State $word \gets w$
-				\State $weight \gets 1$
-				\State $seq \gets \Call{Array}{ry}$
+				\State $word \gets w, weight \gets 1, seq \gets \Call{Array}{ry}$
+				
 				\State $seq[t-t_{min}] \gets \{t,1\}$
 				\State $ R \gets R \cup \{word,weight,seq\} $
 				\EndIf
@@ -184,9 +203,9 @@ Given the ignored word list and the merged word list, the raw data processing pr
 		\EndFor
 	\EndFor
 \EndFor
-\State \Call{Sort}{R}\\
+\State \Call{Sort}{R}
 \Comment{Sort R in descending order by weight }
-\State \textbf{Return} $R[1,...,n]$ \\
+\State \textbf{Return} $R[1,...,n]$ 
 \Comment{Only the top $n$ records are needed}
 \EndProcedure
 
@@ -240,7 +259,7 @@ To demonstrate the proposed visualization method in this paper, an evaluation ex
 
 \begin{figure}
 	\centering
-	\includegraphics[width=.5\textwidth]{images/wordcloud}
+	\includegraphics[width=.95\textwidth]{images/wordcloud}
 	\caption{Temporal Word Cloud}
 	\label{fig:twc}
 \end{figure}
@@ -249,61 +268,12 @@ To demonstrate the proposed visualization method in this paper, an evaluation ex
 
 In this paper, we proposed an embedded visualization method to facilitate the understanding of temporal content evolution in a set of bibliography documents by visually illustrating the hot topic evolution. A system is developed and demonstrated to evaluate the method, which given a very positive feedback. But the current version of the system is lacking of an interactive user interface, which causes a bad performance in parameter adjustment. In the future work, an interactive control panel will be mounted on the interface, which will improve the user experience.
 
+\section{Acknowledgements}
 
-\begin{thebibliography}{1}
+This work was supported by "Research on Lightweight Active Immune Technology for Electric Power Supervisory Control System", a science and technology project of State Grid Co.,Ltd in 2019.
 
-\bibitem{Viegas:2008ew}
-F. B. Viégas and M. Wattenberg, “TIMELINESTag clouds and the case for vernacular visualization,” interactions, vol. 15, no. 4, p. 49, Jul. 2008.
-
-\bibitem{Rivadeneira:2007ge}
-A. W. Rivadeneira, D. M. Gruen, M. J. Muller, and D. R. Millen, “Getting our head in the clouds,” presented at the the SIGCHI Conference, New York, New York, USA, 2007, p. 995.
-
-
-
-\bibitem{LocarekJunge:2010cy}
-H. Locarek-Junge and C. Weihs, Eds., Classification as a Tool for Research. Berlin, Heidelberg: Springer Berlin Heidelberg, 2010.
-
-\bibitem{kaser2007tag}
-O. Kaser and D. Lemire, “Tag-cloud drawing: Algorithms for cloud visualization,” arXiv preprint cs/0703109, 2007.
-
-\bibitem{Seifert:ha}
-C. Seifert, B. Kump, W. Kienreich, G. Granitzer, and M. Granitzer, “On the Beauty and Usability of Tag Clouds,” presented at the 2008 12th International Conference Information Visualisation (IV), pp. 17–25.
-
-\bibitem{Strobelt:2012co}
-H. Strobelt, M. Spicker, A. Stoffel, D. Keim, and O. Deussen, “Rolled-out Wordles: A Heuristic Method for Overlap Removal of 2D Data Representatives,” Computer Graphics Forum, vol. 31, no. 3, pp. 1135–1144, Jun. 2012.
-
-\bibitem{Viegas:km}
-F. B. Viegas, M. Wattenberg, and J. Feinberg, “Participatory Visualization with Wordle,” IEEE Transactions on Visualization and Computer Graphics, vol. 15, no. 6, pp. 1137–1144.
-
-\bibitem{Wang:2018ji}
-Y. Wang, X. Chu, C. Bao, L. Zhu, O. Deussen, B. Chen, and M. Sedlmair, “EdWordle - Consistency-Preserving Word Cloud Editing.,” IEEE Trans. Vis. Comput. Graph., vol. 24, no. 1, pp. 647–656, 2018.
-
-\bibitem{Collins:cn}
-C. Collins, F. B. Viégas, and M. Wattenberg, “Parallel Tag Clouds to explore and analyze faceted text corpora,” presented at the 2009 IEEE Symposium on Visual Analytics Science and Technology, pp. 91–98.
-
-\bibitem{BongshinLee:gz}
-Bongshin Lee, N. H. Riche, A. K. Karlson, and S. Carpendale, “SparkClouds: Visualizing Trends in Tag Clouds,” IEEE Transactions on Visualization and Computer Graphics, vol. 16, no. 6, pp. 1182–1189.
-
-\bibitem{Cui:jj}
-W. Cui, Y. Wu, S. Liu, F. Wei, M. X. Zhou, and H. Qu, “Context preserving dynamic word cloud visualization,” presented at the 2010 IEEE Pacific Visualization Symposium (PacificVis), pp. 121–128.
-
-\bibitem{Chi:gr}
-M.-T. Chi, S.-S. Lin, S.-Y. Chen, C.-H. Lin, and T.-Y. Lee, “Morphable Word Clouds for Time-Varying Text Data Visualization,” IEEE Transactions on Visualization and Computer Graphics, vol. 21, no. 12, pp. 1415–1426.
-
-\bibitem{Lim2016}
-K. W. Lim and W. Buntine, “Bibliographic analysis on research publications using authors, categorical labels and the citation network,” Machine Learning, vol. 103, no. 2, pp. 185–213, May 2016.
-
-\bibitem{dosSantos:2004ck}
-S. dos Santos and K. Brodlie, “Gaining understanding of multivariate and multidimensional data through visualization,” Computers \& Graphics, vol. 28, no. 3, pp. 311–325, Jun. 2004.
-
-\bibitem{Isenberg:2016ika}
-P. Isenberg, F. Heimerl, S. Koch, T. Isenberg, P. Xu, C. D. Stolper, M. Sedlmair, J. Chen, T. Moller, and J. Stasko, “Vispubdata.org: A Metadata Collection About IEEE Visualization (VIS) Publications,” IEEE Transactions on Visualization and Computer Graphics, vol. 23, no. 9, pp. 2199-2206, Oct. 2016.
-
-\bibitem{Bostock:da}
-M. Bostock, V. Ogievetsky, and J. Heer, “$D^3$ Data-Driven Documents,” IEEE Transactions on Visualization and Computer Graphics, vol. 17, no. 12, pp. 2301–2309.
-
-\end{thebibliography}
+\section{References}
+\bibliography{references}
 
 \end{document}
-
 
