@@ -1,0 +1,598 @@
+
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Turnitin, LLC" />
+    <meta name="keywords" content="" /> 
+    <meta name="description" content="" />
+    <meta name="viewport" content="width = initial-scale" />
+    <meta name="viewport" content="height = initial-scale" />
+    
+<title>Turnitin Originality Report</title>
+
+<base href="http://turnitin.com">
+<style type="text/css">
+	
+body	{
+	color: #000;
+	background: #ddd;
+	padding: 0;
+	border: 0;
+	font: 14px Arial, Verdana, sans-serif;
+	margin: 0;
+	text-align: center;
+	}
+	
+form	{
+	padding: 0;
+	margin: 0;
+	}
+	
+p	{
+	padding: .8em 1.5em;
+	margin: 0;
+	text-align: left;
+	}
+	
+img	{
+	border: 0;
+	padding: 0;
+	}
+
+div	{
+	padding: 0;
+	border: 0;
+	text-align: left;
+	}
+	
+strong	{
+	font-weight: bold;
+	}
+	
+h2	{
+	font-size: 15px;
+	margin: 20px 0 10px 20px;
+	}
+	
+a:link, a:visited	{
+	text-decoration: underline;
+	color: #00f;
+	}
+	
+a:hover, a:active	{
+	text-decoration: underline;
+	color: #888;
+	}
+	
+img#logo	{
+	float: right;
+	padding-right: 20px;
+	padding-top: 10px;
+	}
+	
+div#container	{
+	border: 1px solid #aaa;
+	width: 770px;
+	margin: 20px auto;
+	background: #fff;
+	padding: 10px 0;
+	}
+	
+div#top	{
+	background: #fff;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 15px;
+	}
+	
+div#content	{
+	background: #fff;
+	}
+	
+#top p	{
+	padding: .3em 0 .3em 20px;
+	}
+
+#top span	{
+	padding-right: 35px;
+	}
+	
+#top p#orig	{
+	padding-top: 15px;
+	}
+	
+#orig span#score.red	{
+	border-right: 18px solid red;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.orange	{
+	border-right: 18px solid orange;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.yellow	{
+	border-right: 18px solid yellow;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.green	{
+	border-right: 18px solid green;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.blue	{
+	border-right: 18px solid blue;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+div.divider	{
+	width: 7in;
+	border: 1px dotted #888;
+	margin: auto;
+	padding: 4px 0 4px 10px;
+	font-weight: bold;
+	background: #ddd;
+	font-size: 15px;
+	}
+	
+div.links	{
+	width: 7in;
+	margin: auto;
+	}
+	
+.links div	{
+	padding: 15px 20px 15px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div#last	{
+	padding: 15px 20px 20px 20px;
+	border-bottom: 0;
+	}
+	
+div.number	{
+	float: right;
+	background: white;
+	border: 1px solid #888;
+	margin: 0 0 0 20px;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+div.number-l	{
+	float: left;
+	background: white;
+	border: 1px solid #888;
+	margin: 6px 16px 10px 0;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+.links div p	{
+	padding: .2em 1.5em .4em 0;
+	}
+	
+.links div p#mess	{
+	padding: .2em 1.5em 0 0;
+	}
+	
+div#body	{
+	line-height: 1.5em;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 20px;
+	}
+	
+#body p	{
+	color: #555;
+	padding-top: 30px;
+	line-height: 20px;
+	}
+
+	
+#body a	{
+	display: block;
+	color: red;
+	margin: 1em 3em;
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 1em 1em;
+	border: 1px dotted #888;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
+	line-height: 26px;
+	background: #FFFFE5;
+	}
+
+#body span	{
+	color: #555;
+	font-weight: normal;
+	font-size: 14px;
+	}
+
+#body span.number	{
+	display: block;
+	float: right;
+	color: #000;
+	font-weight: normal;
+	border: 1px solid #888;
+	padding: 0 6px;
+	font-weight: bold;
+	margin-left: 15px;
+	font-size: .9em;
+	background: #fff;
+	}
+	
+#actions	{
+	display: none;
+	}
+
+</style>
+
+
+
+</head>
+
+<body id="or_print_report">
+
+
+<div id="container">
+
+<div id="top">
+    <div id="content">
+        <!-- ######### Top Body  ##########################--> 
+        <div id="top_body">
+            <p id="title">
+            <img src="/r/build/images/b3964fd7e38c8fcbb8bfbf2efc1f0635cb_turnitin_logo.gif" id="logo" width="60">
+            Turnitin Originality Report
+            </p>
+                <div class="general_info">
+                    <p>
+                        <span>127HG6406.pdf</span>
+                        
+                        by Anonymous
+                        
+                    </p>
+                    <p>
+                        From turnitin (turnitin)
+                    </p>
+                    <ul>
+                        <li>Processed on 10-Jul-2019 11:48 PM EDT</li>
+                        <li>ID: 1150926332</li>
+                        <li>Word Count: 2375</li>
+                    </ul>
+                </div>
+                <div class="similarity_box">
+                    <div class="overall_similarity">
+                        <div class="color_box orange">&nbsp;</div>
+                        <div class="similarity_title">Similarity Index</div>
+                        <div class="similarity_percent">52%</div>
+                    </div>
+                    <div class="similarity_by_source">
+                        <div class="similarity_title">Similarity by Source</div>
+                        <dl>
+                            <dt>Internet&nbsp;Sources:</dt>
+                            <dd>40%</dd>
+                            <div class="clear"></div>
+                            <dt>Publications:</dt>
+                            <dd>50%</dd>
+                            <div class="clear"></div>
+                            <dt>Student&nbsp;Papers:</dt>
+                            <dd>16%</dd>
+                            <div class="clear"></div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                                 
+        </div>
+        <!-- ######### END Top Body  ##########################--> 
+    </div>
+</div>
+
+<div class="divider">sources:</div>
+
+<div class="links">
+
+	<div>
+	<div class="number-l">1</div>
+	<p>12% match (Internet from 06-Sep-2017)</p>
+
+	<a style="color:red" href="http://graphics.uni-konstanz.de/publikationen/Wang2018EdWordleConsistencypreserving/Edwordle.pdf">http://graphics.uni-konstanz.de/publikationen/Wang2018EdWordleConsistencypreserving/Edwordle.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">2</div>
+	<p>7% match (Internet from 15-Jan-2019)</p>
+
+	<a style="color:green" href="http://www.ycwu.org/Files/pacificvis10_cloud.pdf">http://www.ycwu.org/Files/pacificvis10_cloud.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">3</div>
+	<p>4% match (publications)</p>
+
+	<a style="color:blue" href="http://dx.doi.org/10.1007/978-0-85729-079-3_1">Wolfgang Aigner. "Introduction", Human-Computer Interaction Series, 2011</a>
+
+	</div>
+	<div>
+	<div class="number-l">4</div>
+	<p>3% match (publications)</p>
+
+	<a style="color:brown" href="http://journals.sagepub.com/doi/10.1177/1473871618812163">Ming Jing, Xueqing Li, Li Zhang. "Interactive temporal display through collaboration networks visualization", Information Visualization, 2018</a>
+
+	</div>
+	<div>
+	<div class="number-l">5</div>
+	<p>3% match (Internet from 17-Jan-2019)</p>
+
+	<a style="color:#ff6600" href="https://karwailim.github.io/pubs/LimBuntine_MLJ_2016.pdf">https://karwailim.github.io/pubs/LimBuntine_MLJ_2016.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">6</div>
+	<p>2% match (Internet from 26-Jun-2017)</p>
+
+	<a style="color:#630000" href="http://graphics.csie.ncku.edu.tw/TVCG_Word_Cloud/TVCG_word_cloud.pdf">http://graphics.csie.ncku.edu.tw/TVCG_Word_Cloud/TVCG_word_cloud.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">7</div>
+	<p>2% match (Internet from 06-Sep-2018)</p>
+
+	<a style="color:#009cff" href="http://scitepress.org/papers/2018/67181/pdf/index.html">http://scitepress.org/papers/2018/67181/pdf/index.html</a>
+
+	</div>
+	<div>
+	<div class="number-l">8</div>
+	<p>1% match (Internet from 10-Nov-2018)</p>
+
+	<a style="color:#31ff00" href="http://www.yunhaiwang.org/infovis17/edwordle/nwordle.pdf">http://www.yunhaiwang.org/infovis17/edwordle/nwordle.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">9</div>
+	<p>1% match (publications)</p>
+
+	<a style="color:#330099" href="http://link.springer.com/10.1007/978-0-85729-079-3">Wolfgang Aigner, Silvia Miksch, Heidrun Schumann, Christian Tominski. "Visualization of Time-Oriented Data", Springer Nature, 2011</a>
+
+	</div>
+	<div>
+	<div class="number-l">10</div>
+	<p>1% match (publications)</p>
+
+	<a style="color:#00cc99" href="http://link.springer.com/10.1007/978-3-319-64870-5">"Computer Vision, Imaging and Computer Graphics Theory and Applications", Springer Nature, 2017</a>
+
+	</div>
+	<div>
+	<div class="number-l">11</div>
+	<p>1% match (publications)</p>
+
+	<a style="color:#ff0063" href="http://link.springer.com/10.1007/978-981-13-9714-1">"Advances in Intelligent Information Hiding and Multimedia Signal Processing", Springer Science and Business Media LLC, 2020</a>
+
+	</div>
+	<div>
+	<div class="number-l">12</div>
+	<p>1% match (Internet from 25-Apr-2016)</p>
+
+	<a style="color:#006331" href="http://media.proquest.com/media/pq/classic/doc/3377141801/fmt/ai/rep/NPDF?_s=8m4W4QvljaCh%2FHtHHVb0FWmv0JU%3D">http://media.proquest.com/media/pq/classic/doc/3377141801/fmt/ai/rep/NPDF?_s=8m4W4QvljaCh%2FHtHHVb0FWmv0JU%3D</a>
+
+	</div>
+	<div>
+	<div class="number-l">13</div>
+	<p>1% match (Internet from 06-Oct-2018)</p>
+
+	<a style="color:#9966ff" href="https://catalog.lib.fit.edu/Record/312262/Cite">https://catalog.lib.fit.edu/Record/312262/Cite</a>
+
+	</div>
+	<div>
+	<div class="number-l">14</div>
+	<p>1% match (student papers from 10-May-2019)</p>
+
+	<a style="color:#9c6331" href="/paperInfo.asp?r=87.3580532502899&svr=329&session-id=e97b40b930309f162e219dfe2d79fe0c&lang=en_us&oid=oid:2:601337249&perc=1">Submitted to University of Bath on 2019-05-10</a>
+
+	</div>
+	<div>
+	<div class="number-l">15</div>
+	<p>1% match (Internet from 05-Apr-2018)</p>
+
+	<a style="color:#ce0031" href="https://suche.thulb.uni-jena.de/Summon/Search?lookfor=%22IEEE+Transactions+on+Visualization+and+Computer+Graphics%22&type=PublicationTitle">https://suche.thulb.uni-jena.de/Summon/Search?lookfor=%22IEEE+Transactions+on+Visualization+and+Computer+Graphics%22&type=PublicationTitle</a>
+
+	</div>
+	<div>
+	<div class="number-l">16</div>
+	<p>1% match (Internet from 10-Nov-2017)</p>
+
+	<a style="color:#cc9900" href="https://www.cc.gatech.edu/~john.stasko/staskoCV-external.pdf">https://www.cc.gatech.edu/~john.stasko/staskoCV-external.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">17</div>
+	<p>1% match (Internet from 13-Jan-2018)</p>
+
+	<a style="color:#63009c" href="http://www.scitepress.org/Papers/2014/51163/index.html">http://www.scitepress.org/Papers/2014/51163/index.html</a>
+
+	</div>
+	<div>
+	<div class="number-l">18</div>
+	<p>1% match (publications)</p>
+
+	<a style="color:#cc6600" href="http://link.springer.com/10.1007/s41095-019-0143-2">Minghai Chen, Fan Xu, Lin Lu. "Manufacturable pattern collage along a boundary", Computational Visual Media, 2019</a>
+
+	</div>
+	<div>
+	<div class="number-l">19</div>
+	<p>1% match (student papers from 29-May-2019)</p>
+
+	<a style="color:#cc0066" href="/paperInfo.asp?r=87.3580532502899&svr=329&session-id=e97b40b930309f162e219dfe2d79fe0c&lang=en_us&oid=oid:2:602871573&perc=1">Submitted to Staffordshire University on 2019-05-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">20</div>
+	<p>1% match (Internet from 17-Apr-2019)</p>
+
+	<a style="color:#33cc99" href="http://export.arxiv.org/pdf/1904.06601">http://export.arxiv.org/pdf/1904.06601</a>
+
+	</div>
+	<div>
+	<div class="number-l">21</div>
+	<p>1% match (Internet from 29-Jun-2017)</p>
+
+	<a style="color:#336699" href="http://graphics.csie.ncku.edu.tw/Tony/papers/siggraph_poster_0063.pdf">http://graphics.csie.ncku.edu.tw/Tony/papers/siggraph_poster_0063.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">22</div>
+	<p>1% match (Internet from 27-Jun-2016)</p>
+
+	<a style="color:red" href="http://mdpi.com/1424-8220/16/3/380/htm">http://mdpi.com/1424-8220/16/3/380/htm</a>
+
+	</div>
+	<div>
+	<div class="number-l">23</div>
+	<p>< 1% match (publications)</p>
+
+	<a style="color:green" href="http://dl.acm.org/citation.cfm?doid=oid:37:48200469.2508409">Bernhard Reinert, Tobias Ritschel, Hans-Peter Seidel. "Interactive by-example design of artistic packing layouts", ACM Transactions on Graphics, 2013</a>
+
+	</div>
+	<div>
+	<div class="number-l">24</div>
+	<p>< 1% match (Internet from 20-Mar-2019)</p>
+
+	<a style="color:blue" href="https://link.springer.com/chapter/10.1007%2F978-3-642-24028-7_60">https://link.springer.com/chapter/10.1007%2F978-3-642-24028-7_60</a>
+
+	</div>
+	<div>
+	<div class="number-l">25</div>
+	<p>< 1% match (publications)</p>
+
+	<a style="color:brown" href="http://link.springer.com/10.1007/978-981-10-2053-7">"Social Computing", Springer Science and Business Media LLC, 2016</a>
+
+	</div>
+	<div>
+	<div class="number-l">26</div>
+	<p>< 1% match (Internet from 30-Nov-2018)</p>
+
+	<a style="color:#ff6600" href="https://docplayer.nl/47195941-Optimalisatie-van-energie-efficientie-door-semi-automatische-detectie-van-fouten-in-android-applicaties.html">https://docplayer.nl/47195941-Optimalisatie-van-energie-efficientie-door-semi-automatische-detectie-van-fouten-in-android-applicaties.html</a>
+
+	</div>
+	<div>
+	<div class="number-l">27</div>
+	<p>< 1% match (publications)</p>
+
+	<a style="color:#630000" href="http://link.springer.com/10.1007/978-3-319-77383-4">"Advances in Multimedia Information Processing – PCM 2017", Springer Science and Business Media LLC, 2018</a>
+
+	</div>
+	<div>
+	<div class="number-l">28</div>
+	<p>< 1% match (publications)</p>
+
+	<a style="color:#009cff" href="http://ieeexplore.ieee.org/document/8104326/">Li Dong, Li Yong, Wang Yong, Liu Han, Zhang Kun, Sui Jingqi, Chen Daoming, Liu Xiangzhi. "Research on IEC 61850-based Dynamic Environmental Monitoring System for Power Communication Room", 2017 International Conference on Smart Grid and Electrical Automation (ICSGEA), 2017</a>
+
+	</div>
+	<div>
+	<div class="number-l">29</div>
+	<p>< 1% match (student papers from 27-Feb-2007)</p>
+
+	<a style="color:#31ff00" href="/paperInfo.asp?r=87.3580532502899&svr=329&session-id=e97b40b930309f162e219dfe2d79fe0c&lang=en_us&oid=oid:1:41364718&perc=0">Submitted to The Hong Kong Polytechnic University on 2007-02-27</a>
+
+	</div>
+	<div>
+	<div class="number-l">30</div>
+	<p>< 1% match (Internet from 24-Aug-2018)</p>
+
+	<a style="color:#330099" href="http://bib.dbvis.de/uploadedFiles/QMSTAR_QualityMetricsForInformationVisualization_FINAL.pdf">http://bib.dbvis.de/uploadedFiles/QMSTAR_QualityMetricsForInformationVisualization_FINAL.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">31</div>
+	<p>< 1% match (Internet from 08-Apr-2019)</p>
+
+	<a style="color:#00cc99" href="http://openaccess.city.ac.uk/18383/1/2018_VIS_mybrush.pdf">http://openaccess.city.ac.uk/18383/1/2018_VIS_mybrush.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">32</div>
+	<p>< 1% match (Internet from 14-Apr-2019)</p>
+
+	<a style="color:#ff0063" href="https://link.springer.com/content/pdf/10.1007%2F978-3-642-39209-2.pdf">https://link.springer.com/content/pdf/10.1007%2F978-3-642-39209-2.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">33</div>
+	<p>< 1% match (Internet from 18-Jun-2015)</p>
+
+	<a style="color:#006331" href="http://kamome.lib.ynu.ac.jp/dspace/bitstream/10131/7741/1/4-Shen.pdf">http://kamome.lib.ynu.ac.jp/dspace/bitstream/10131/7741/1/4-Shen.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">34</div>
+	<p>< 1% match (publications)</p>
+
+	<a style="color:#9966ff" href="http://link.springer.com/10.1007/978-3-319-90092-6_6">Dimitar Dimitrov, Denis Helic, Markus Strohmaier. "Chapter 6 Tag-Based Navigation and Visualization", Springer Nature, 2018</a>
+
+	</div>
+	<div>
+	<div class="number-l">35</div>
+	<p>< 1% match (publications)</p>
+
+	<a style="color:#9c6331" href="http://dx.doi.org/10.1007/978-94-007-7618-0">Lecture Notes in Electrical Engineering, 2014.</a>
+
+	</div>
+	<div id="last">
+	<div class="number-l">36</div>
+	<p>< 1% match (publications)</p>
+
+	<a style="color:#ce0031" href="http://link.springer.com/10.1007/978-3-642-10745-0">"Classification as a Tool for Research", Springer Science and Business Media LLC, 2010</a>
+
+	</div>
+
+</div>
+
+
+
+<div class="divider">paper text:</div>
+<div id="body">
+An Embedded Visualization Method through Temporal Bibliographic Analysis Yan WANG1,*, Mingyu SUN1, Ning HU1, Sentao LIU1 and Juncheng SI1 <a href="javascript:openDSC(593596051, 37, '5572');" onmouseover="doRollover(28);" onmouseout="undoRollover(28);" id="5572" name="28" style="color:#009cff" class="#009cff"><span class="b-ref">28</span>1 State Grid Shandong<span> DongYing </span>Electric Power Company,<span> DongYing 257091, </span>Shandong<span> Province, </span>China</a> E-mail: * zdhkj2019@163.com Abstract. <a href="javascript:openDSC(625456004, 37, '497');" onmouseover="doRollover(4);" onmouseout="undoRollover(4);" id="497" name="4" style="color:brown" class="brown"><span class="b-ref">4</span>Visual analytics play an important role in understanding complex datasets,<span> e.g. </span>the bibliographic</a> data set. Word <a href="javascript:openDSC(3608421392, 3265, '7373');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="7373" name="2" style="color:green" class="green"><span class="b-ref">2</span>clouds, which use a compact visual form of words, have been used widely to provide the content overview of a</a> set of documents, especially the hot topic trends. <a href="javascript:openDSC(501401992, 37, '4811');" onmouseover="doRollover(25);" onmouseout="undoRollover(25);" id="4811" name="25" style="color:brown" class="brown"><span class="b-ref">25</span>In this paper, we<span> proposed </span>a<span> visualization </span>method that<span> embedding </span>the temporal<span> patterns along </span>the</a> word to visually illustrate the hot topic evolution. <a href="javascript:openDSC(3608421392, 3265, '7367');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="7367" name="2" style="color:green" class="green"><span class="b-ref">2</span>1. Introduction In recent years,<span> word </span>clouds<span> (or tag clouds), </span>which use a compact visual form of words, have been used widely to provide the content overview of a<span> set of documents, </span>e.g.</a> the bibliographic data set. <a href="javascript:openDSC(878730040, 2909, '8011');" onmouseover="doRollover(6);" onmouseout="undoRollover(6);" id="8011" name="6" style="color:#630000" class="#630000"><span class="b-ref">6</span>How to provide a pleasing summarization for a huge text data has thus become an important research topic in information<span> visualization. </span>Word clouds are text-based visual representations that display word significance in terms of popularity and importance by using different font sizes and colors.</a> Existing <a href="javascript:openDSC(3608421392, 3265, '7374');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="7374" name="2" style="color:green" class="green"><span class="b-ref">2</span>efforts in producing effective tag clouds have achieved certain success especially in addressing many aesthetic issues.</a><a href="javascript:openDSC(3608421392, 3265, '7375');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="7375" name="2" style="color:green" class="green"><span class="b-ref">2</span>However, existing tag clouds are inadequate in portraying temporal content evolution of a set of<span> bibliography </span>documents.</a> For example, to understand how a hot research topic <a href="javascript:openDSC(3608421392, 3265, '7381');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="7381" name="2" style="color:green" class="green"><span class="b-ref">2</span>have varied during the last decade could be a difficult task if we just visualize the<span> bibliography </span>collections one by one using tag clouds. A simple animation between different tag clouds at<span> different </span>time points would be inadequate to preserve the context for<span> effectively </span>tracking the evolution of the content to find the sequential patterns or correlations.<span> To facilitate </span>the</a><a href="javascript:openDSC(3608421392, 3265, '7386');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="7386" name="2" style="color:green" class="green"><span class="b-ref">2</span>understanding of temporal content evolution in a set of<span> bibliography </span>documents, we propose a visualization method that</a> embedding the temporal patterns along the word to visually illustrate the hot topic evolution. <a href="javascript:openDSC(1952689429, 2909, '5733');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="5733" name="1" style="color:red" class="red"><span class="b-ref">1</span>2. Related Work We review previous work related to word cloud visualization and</a> temporal word clouds. <a href="javascript:openDSC(1952689429, 2909, '5734');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="5734" name="1" style="color:red" class="red"><span class="b-ref">1</span>2.1. Word Cloud Visualization A word cloud, also known as a tag cloud, is a visual representation of text data that has been used on the web since 1997[<span> 1]. </span>A word cloud encodes the frequency of words of a given text into font size and color[<span> 2], </span>and spatially arranges the words on the canvas.</a><a href="javascript:openDSC(1952689429, 2909, '5737');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="5737" name="1" style="color:red" class="red"><span class="b-ref">1</span>Standard word cloud visualizations use a rectangular line-by-line layout, where the words may be sorted alphabetically or by their importance. To produce more compact and aesthetic visualizations, a large family of alternative layout methods have been proposed[</a> 3,4,5,6,7,8]. Among them, the most well-known algorithm is EdWordle[8], <a href="javascript:openDSC(637749328, 37, '4423');" onmouseover="doRollover(18);" onmouseout="undoRollover(18);" id="4423" name="18" style="color:#cc6600" class="#cc6600"><span class="b-ref">18</span>a method for consistently editing word clouds,<span> which </span>allows users to<span> move and </span>edit words while preserving the neighborhoods of other words.</a><a href="javascript:openDSC(2682750434, 3265, '5624');" onmouseover="doRollover(8);" onmouseout="undoRollover(8);" id="5624" name="8" style="color:#31ff00" class="#31ff00"><span class="b-ref">8</span>However, such<span> enhancements </span>still do not capture the relationship between words, let alone the temporal coherence of time-varying text data. Therefore, a variety of temporal word cloud generation methods have been proposed in recent years.</a> 2.2. <a href="javascript:openDSC(1952689429, 2909, '5744');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="5744" name="1" style="color:red" class="red"><span class="b-ref">1</span>Temporal Word Clouds Given a time-varying set of words, temporal word clouds attempt to visualize temporal trends while preserving temporal coherence. Collins et al.<span> [9] </span>introduce Parallel TagClouds that combine parallel coordinates and traditional word clouds, where the words of each document are distributed along each coordinate axis. Lee et al.<span> [10] </span>present<span> the </span>Sparkclouds that visualize trends between multiple word clouds by integrating<span> spark lines </span>into a word cloud. Both methods perform well in the visualization of trends, with<span> the </span>Sparkclouds being the better one in terms of scalability. Cui et al. [11] combine a trend chart and multiple word clouds together to illustrate temporal changes of the underlying data. By combining multidimensional scaling and force-directed layout, this method can create semantic and stable word clouds over time. Recently, Chi et al.<span> [12] </span>propose<span> a </span>morphable word clouds, where a sequence of spatial shapes is specified as a boundary for a set of time-varying word clouds. By using rigid body dynamics, they arrange words within the given shape sequence so that temporal changes are encoded by both the shapes and the content of the word clouds. In this paper, we</a> proposed <a href="javascript:openDSC(598723622, 37, '2741');" onmouseover="doRollover(27);" onmouseout="undoRollover(27);" id="2741" name="27" style="color:#630000" class="#630000"><span class="b-ref">27</span>an embedded<span> temporal </span>visualization<span> method </span>to<span> present </span>the temporal patterns in the</a> text. 3. Proposed Technique 3.1. Motivation <a href="javascript:openDSC(3667719967, 3265, '6234');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="6234" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>Models of bibliographic data need to consider many kinds of information. Articles are usually accompanied by metadata such as authors, publication data, categories and time[</a> 13]. <a href="javascript:openDSC(3667719967, 3265, '6229');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="6229" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>Bibliographic analysis considers the author’s research areas, the citation network and the paper content among other things,</a> which can be combined into <a href="javascript:openDSC(3667719967, 3265, '6230');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="6230" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>a topic model that produces a bibliographic model of authors, topics and documents.</a> In this paper, <a href="javascript:openDSC(3667719967, 3265, '6231');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="6231" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>we propose a novel and efficient inference<span> visualization </span>algorithm<span> to explore </span>the</a> constantly change of the hot topics. 3.2. System Overview <a href="javascript:openDSC(635739234, 37, '1245');" onmouseover="doRollover(9);" onmouseout="undoRollover(9);" id="1245" name="9" style="color:#330099" class="#330099"><span class="b-ref">9</span>To facilitate generation of visual output at all three levels, a flexible mapping strategy is required. Such a strategy has been manifested as the so-called<span> visualization </span>pipeline.</a> The visualization pipeline leveraged in this paper is proposed by Santos and Brodlie[14], which consists of the three steps: filtering, mapping and rendering (see Figure 1). <a href="javascript:openDSC(33900117, 37, '2');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="2" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>The filtering step prepares the raw input data for processing through the<span> remaining </span>steps of the pipeline. This is done with respect to the given analysis task and includes not only selection of relevant data but also operations for data enrichment or data reduction, interpolation, data cleansing, grouping, dimension reduction, and others. Literally, the mapping step maps the prepared data to appropriate visual<span> variables. </span>This is the most crucial step as it largely influences the expressiveness and effectiveness of the resulting visual representation. Finally, the rendering step<span> generates </span>actual images from the previously computed geometry and visual attributes. This general pipeline model is the basis for many visualization systems.</a> Figure 1. Visualization Pipeline 4. Temporal Display Design The bibliography raw data usually is collected in plain text files, and organized by a standard rule, such as BibTex, EndNote etc. <a href="javascript:openDSC(625456004, 37, '513');" onmouseover="doRollover(4);" onmouseout="undoRollover(4);" id="513" name="4" style="color:brown" class="brown"><span class="b-ref">4</span>In this<span> paper, </span>we use the IEEE VIS conference series<span> data[15] </span>from 1990 to 2016 to illustrate the usage of our method. The data used in our experiments<span> contains </span>IEEE VIS publications,<span> i.e., </span>InfoVis, SciVis, VAST, or Vis. Each record consists of 11 fields, including conference type, publication year, paper title, DOI, abstract, author names, and references (inside this dataset only).<span> In </span>the</a> purpose of exploring research topic, only some fields are involved in the proposed method, which contains the topic features and temporal features. Specifically, the topic features will be extracted from these fields, which are paper title, abstract, and full text if available. The temporal features will be aggregated by the time granularity, which is the 'year' data field in this case. 4.1. Data Processing The raw data contains topic features and temporal features will be filtered into the focus data by the <a href="javascript:openDSC(53421054, 37, '6811');" onmouseover="doRollover(35);" onmouseout="undoRollover(35);" id="6811" name="35" style="color:#9c6331" class="#9c6331"><span class="b-ref">35</span>data processing<span> approach. </span>The<span> raw </span>data is<span> composed </span>by</a> records, which could be distinct from each other by some specific notations or punctuation, such as a semicolon or a line break. Let's define the raw data set <a href="javascript:openDSC(1735981887, 3722, '7081');" onmouseover="doRollover(20);" onmouseout="undoRollover(20);" id="7081" name="20" style="color:#33cc99" class="#33cc99"><span class="b-ref">20</span>is X := {X(1),X(2),...,X(n)}, where<span> the </span>n is the number of<span> records contained in </span>the</a> raw data, and the X(i) means the ith record in X with 1 ≤ i ≤ n. To show the temporal visualization of the bibliography data set, both the words variable and the times variable should be considered in the data processing approach. To achieve a better visualization presentation with clarity and concision, the method proposed in this paper gives a general pipeline to declare the details of the data processing. An ignored word list and a merged word list should be initialized before the data processing approach, and will be continuous updated during the data exploring activity. The ignored word list contains frequently used words (such as and, the, because, and so on) or words that you do not want indexed, which will be excluded from the result. The data processing program comes with a default set of ignored words that you can modify as needed. The ignored word list could be defined as <a href="javascript:openDSC(41364718, 1, '5568');" onmouseover="doRollover(29);" onmouseout="undoRollover(29);" id="5568" name="29" style="color:#31ff00" class="#31ff00"><span class="b-ref">29</span>P := {P1,P2,...,Pm}, where Pi<span> with </span>1 ≤ i ≤ m</a> means a single word will be ignored. The merged word list is composed by several word groups, each group contains the words which is a synonym for each other. The merged word list is <a href="javascript:openDSC(2032325503, 2474, '8142');" onmouseover="doRollover(22);" onmouseout="undoRollover(22);" id="8142" name="22" style="color:red" class="red"><span class="b-ref">22</span>defined as M := { M(1), M(2),...,M(n) }, where M(i)<span> with 1 ≤ </span>i</a> ≤ n means the ith merged word group. The merged word group is an order-sensitive sequence, which is defined as <a href="javascript:openDSC(1919766549, 2209, '8245');" onmouseover="doRollover(33);" onmouseout="undoRollover(33);" id="8245" name="33" style="color:#006331" class="#006331"><span class="b-ref">33</span>M(i) := { M1(i),M2(i),...,Mm(i)},</a> and all the words in the same merged word group will be merged into the first word in the sequence. The merged word list can be initialized by several approaches. One of the most leveraged method is the word distance algorithm, such as the Levenshtein <a href="javascript:openDSC(1595971394, 3265, '6275');" onmouseover="doRollover(7);" onmouseout="undoRollover(7);" id="6275" name="7" style="color:#009cff" class="#009cff"><span class="b-ref">7</span>algorithm, which is a string metric for measuring difference between two sequences. Informally, the Levenshtein distance between two words is the minimum number of single-character edits (i.e. insertions, deletions or substitutions) required to change one word into the other.<span> But </span>the<span> word </span>distance</a> algorithm should be applied under supervision. For example, the words "universe" and "university" are quite similar but with very different meaning. Given the ignored word list and the merged word list, the raw data processing program could be leveraged to produce the focus data set, which is defined as R := {R1,R2,...,Rn}, where Ri := {word, weight, seq } and seq := [{t1,v1},...,{tn,vn}]. Considering the visual dimension, the focus data set only contains the n records of the whole data set, following the rule of sorting the records in descending order by the weight variable of each record. 4.2. Data Mapping The mapping from focus data to geometric data is the core of our method. Compared to traditional word cloud visualization algorithm, e.g. the Wordle layout algorithm, our method has considered the relevant temporal patterns additionally. The whole process of the algorithm is similar to the Wordle layout algorithm, but with one bit improvement, which is the placement of the underline pattern bar under the word area before the detection of the intersections. For each word in the focus data, the algorithm gives the dimension of the word and the relevance font size when there is no intersection with any previously placed words. The temporal pattern related to each word is encoded into the underline pattern bar, which is split joint by a rectangle sequence filled with a correlated color. There is a one-to-one relationship between the temporal pattern and the rectangle sequence, and the numeric value in the temporal pattern is encoded to a color. 4.3. Visualization Result To demonstrate the proposed visualization method in this paper, an evaluation experiment is developed base on the IEEE VIS conference series data (as mentioned in section 4). The experiment is implemented by JavaScript program language, and exhibited in the chrome browser. The data mapping part of the algorithm leverages the "Canvas" technique to perform the intersection detection during the word layout phase. The final visualization effect is achieved by the "SVG" specification provided by a third-party library named D3[16]. A final visual snapshot of the system is shown in the figure 2. By utilizing the system, a researcher could have a good understanding what aspects to consider when selecting a topic for the research paper. Figure 2. Temporal Word Cloud <a href="javascript:openDSC(1641228014, 3722, '7178');" onmouseover="doRollover(32);" onmouseout="undoRollover(32);" id="7178" name="32" style="color:#ff0063" class="#ff0063"><span class="b-ref">32</span>5. Conclusion In this paper, we proposed<span> an embedded visualization </span>method</a><a href="javascript:openDSC(3608421392, 3265, '7388');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="7388" name="2" style="color:green" class="green"><span class="b-ref">2</span>to facilitate the understanding of temporal content evolution in a set of<span> bibliography </span>documents</a> by visually illustrating the hot topic evolution. A system is developed and demonstrated to evaluate the method, which given a very positive feedback. But the current version of the system is lacking of an interactive user interface, which causes a bad performance in parameter adjustment. In the future work, an interactive control panel will be mounted on the interface, which will improve the user experience. <a href="javascript:openDSC(638652732, 37, '4260');" onmouseover="doRollover(11);" onmouseout="undoRollover(11);" id="4260" name="11" style="color:#ff0063" class="#ff0063"><span class="b-ref">11</span>Acknowledgements This work was supported by "Research on Lightweight Active Immune<span> Technology </span>for Electric Power Supervisory Control System", a science and technology project of State Grid Co.,Ltd in 2019. References [1]<span> Viegas </span>F</a> B and Wattenberg M 2008 interactions 15 49 [2] <a href="javascript:openDSC(3365586254, 2909, '6336');" onmouseover="doRollover(17);" onmouseout="undoRollover(17);" id="6336" name="17" style="color:#63009c" class="#63009c"><span class="b-ref">17</span>Rivadeneira A W, Gruen D M, Muller M J and Millen D R 2007 Getting our head in the clouds</a> the SIGCHI <a href="javascript:openDSC(3103910977, 3265, '7482');" onmouseover="doRollover(26);" onmouseout="undoRollover(26);" id="7482" name="26" style="color:#ff6600" class="#ff6600"><span class="b-ref">26</span>Conference (New York, New York, USA: ACM Press) p</a> 995 [3] <a href="javascript:openDSC(598103375, 37, '2654');" onmouseover="doRollover(34);" onmouseout="undoRollover(34);" id="2654" name="34" style="color:#9966ff" class="#9966ff"><span class="b-ref">34</span>Locarek-Junge H<span> and </span>Weihs C (eds)</a> 2010 Classication <a href="javascript:openDSC(2087416602, 3265, '5849');" onmouseover="doRollover(13);" onmouseout="undoRollover(13);" id="5849" name="13" style="color:#9966ff" class="#9966ff"><span class="b-ref">13</span>as a Tool for Research Proceedings of the 11th IFCS Biennial Conference and 33rd Annual Conference of the Gesellschaft fur<span> Klassikation </span>e.V., Dresden, March 13-18, 2009 (Berlin,<span> Heidelberg: </span>Springer</a> Berlin Heidelberg) [4] <a href="javascript:openDSC(590391588, 37, '2952');" onmouseover="doRollover(36);" onmouseout="undoRollover(36);" id="2952" name="36" style="color:#ce0031" class="#ce0031"><span class="b-ref">36</span>Kaser O and Lemire D 2007</a> arXiv preprint cs/0703109 [5] <a href="javascript:openDSC(601337249, 2, '1742');" onmouseover="doRollover(14);" onmouseout="undoRollover(14);" id="1742" name="14" style="color:#9c6331" class="#9c6331"><span class="b-ref">14</span>Seifert C, Kump B, Kienreich W, Granitzer G and Granitzer M On the Beauty and Usability of Tag Clouds 2008 12th International Conference Information Visualisation<span> (IV) (IEEE) </span>pp 17-25</a> [6] <a href="javascript:openDSC(48200469, 37, '5532');" onmouseover="doRollover(23);" onmouseout="undoRollover(23);" id="5532" name="23" style="color:green" class="green"><span class="b-ref">23</span>Strobelt H, Spicker M,<span> Stoel </span>A, Keim D and Deussen O 2012</a> Computer Graphics Forum 31 1135-1144 [7] <a href="javascript:openDSC(4069520071, 2909, '6315');" onmouseover="doRollover(15);" onmouseout="undoRollover(15);" id="6315" name="15" style="color:#ce0031" class="#ce0031"><span class="b-ref">15</span>Viegas F B, Wattenberg M<span> and </span>Feinberg J IEEE Transactions on Visualization and Computer Graphics</a> 15 1137-1144 [8] <a href="javascript:openDSC(602871573, 2, '3706');" onmouseover="doRollover(19);" onmouseout="undoRollover(19);" id="3706" name="19" style="color:#cc0066" class="#cc0066"><span class="b-ref">19</span>Wang Y, Chu X, Bao C, Zhu L, Deussen O, Chen B and Sedlmair M 2018</a> IEEE Trans. Vis. Comput. Graph. 24 647-656 [9] <a href="javascript:openDSC(584083465, 37, '3549');" onmouseover="doRollover(10);" onmouseout="undoRollover(10);" id="3549" name="10" style="color:#00cc99" class="#00cc99"><span class="b-ref">10</span>Collins C, Viegas F<span> B and </span>Wattenberg M Parallel Tag Clouds to explore and<span> analyze </span>faceted text corpora<span> 2009 </span>IEEE Symposium on Visual Analytics Science and Technology<span> (IEEE) </span>pp 91-98<span> [10] </span>Lee B, Riche N<span> H, </span>Karlson A<span> K and </span>Carpendale S</a><a href="javascript:openDSC(1041052497, 3722, '7246');" onmouseover="doRollover(24);" onmouseout="undoRollover(24);" id="7246" name="24" style="color:blue" class="blue"><span class="b-ref">24</span>IEEE Transactions on Visualization and Computer Graphics 16 1182-1189</a> [11] <a href="javascript:openDSC(1036300568, 2474, '6661');" onmouseover="doRollover(12);" onmouseout="undoRollover(12);" id="6661" name="12" style="color:#006331" class="#006331"><span class="b-ref">12</span>Cui W, Wu Y, Liu S, Wei F, Zhou M X<span> and </span>Qu H Context preserving dynamic word cloud visualization 2010 IEEE Pacific Visualization Symposium (PacificVis)<span> (IEEE) </span>pp 121-128<span> [12] Chi </span>M</a><a href="javascript:openDSC(930507132, 2909, '8006');" onmouseover="doRollover(21);" onmouseout="undoRollover(21);" id="8006" name="21" style="color:#336699" class="#336699"><span class="b-ref">21</span>T, Lin S S, Chen S Y, Lin C H and Lee T Y</a><a href="javascript:openDSC(1491822001, 3722, '7155');" onmouseover="doRollover(31);" onmouseout="undoRollover(31);" id="7155" name="31" style="color:#00cc99" class="#00cc99"><span class="b-ref">31</span>IEEE Transactions on Visualization and Computer Graphics 21</a> 1415-1426 [13] Lim K W and Buntine W 2016 Machine Learning 103 185-213 [14] <a href="javascript:openDSC(635739234, 37, '1253');" onmouseover="doRollover(9);" onmouseout="undoRollover(9);" id="1253" name="9" style="color:#330099" class="#330099"><span class="b-ref">9</span>dos Santos S and Brodlie K 2004</a> Computers &amp; Graphics 28 311-325 [15] <a href="javascript:openDSC(2347590727, 2909, '6385');" onmouseover="doRollover(16);" onmouseout="undoRollover(16);" id="6385" name="16" style="color:#cc9900" class="#cc9900"><span class="b-ref">16</span>Isenberg P, Heimerl F, Koch S, Isenberg T, Xu P, Stolper C D, Sedlmair M, Chen J, Moller T and Stasko J</a> 2016 <a href="javascript:openDSC(1384059800, 3265, '6031');" onmouseover="doRollover(30);" onmouseout="undoRollover(30);" id="6031" name="30" style="color:#330099" class="#330099"><span class="b-ref">30</span>IEEE Transactions on Visualization and Computer Graphics 23</a> 2199- 2206 [16] <a href="javascript:openDSC(4069520071, 2909, '6308');" onmouseover="doRollover(15);" onmouseout="undoRollover(15);" id="6308" name="15" style="color:#ce0031" class="#ce0031"><span class="b-ref">15</span>Bostock M, Ogievetsky V<span> and </span>Heer J IEEE Transactions on Visualization and Computer Graphics</a> 17 2301-2309 
+</div>
+</div>
+</body>
+</html>
